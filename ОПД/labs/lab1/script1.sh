@@ -106,8 +106,7 @@ wc -m swanna1/* 1> /tmp/result.txt 2> /tmp/error_log.txt
 echo 4.5:
 grep -in 'a$' pineco1 2>&1
 echo 4.6:
-
-ls -lR | grep "^-"
+ls -lR 2>/dev/null | sort -k2,2nr | grep '^\(\S\+\s\+\)\{8\}s'
 
 #5 пункт
 rm froslass7
