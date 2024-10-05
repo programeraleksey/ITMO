@@ -1,3 +1,6 @@
+chmod -R 700 lab0
+rm -r lab0
+
 #1 пункт
 mkdir lab0
 cd lab0
@@ -98,21 +101,21 @@ cat swanna1/starmie arcanine4/psyduck > pineco1_60
 echo 4.1:
 wc -l arcanine4/beldum arcanine4/loudred arcanine4/hoppip arcanine4/psyduck snorlax4/drapion snorlax4/chikorita 2>&1 | sort -nr
 echo 4.2:
-ls -Rt | grep 2>&1 '^b'
+ls -Rtl | grep 2>&1 '^\(\S\+\s\+\)\{8\}b'
 echo 4.3:
 grep -nv 'e$' arcanine4/*
 echo 4.4:
-wc -m swanna1/* 1> /tmp/result.txt 2> /tmp/error_log.txt
+wc -m swanna1/* 1> /tmp/result.txt 2> /tmp/error_log_lab1.txt
 echo 4.5:
-grep -in 'a$' pineco1 2>&1
+grep -in 'a$' pineco1 
 echo 4.6:
 ls -lR 2>/dev/null | sort -k2,2nr | grep '^\(\S\+\s\+\)\{8\}s' | head -n 2
 
-#5 пункт
 rm froslass7
 chmod u+w arcanine4
 rm arcanine4/loudred
 rm arcanine4/psyduckfrosla*
+chmod u+w arcanine4/hoppipconkeldu*
 rm arcanine4/hoppipconkeldu*
 chmod -R u+w arcanine4
 rm -r arcanine4
