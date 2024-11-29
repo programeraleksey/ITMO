@@ -1,0 +1,135 @@
+skinparam linetype ortho
+
+@startuml
+
+left to right direction
+skinparam linetype ortho
+
+
+class Animal <<abstract>>{
+  + type: TypesOfAnimals
+  + color: String
+  + name: String
+  
+  + getType(): TypesOfAnimals <<abstract>>
+  + getColor(): String <<abstract>>
+  + getName(): String <<abstract>>
+}
+
+class Grasshopper extends Animal{
+  + alive: boolean
+  
+  + getName(): String <<override>>
+  + isAlive(): boolean
+  + getColor(): String <<override>>
+  + getName(): String <<override>>
+  + jump(): String
+  + die(): String
+}
+
+class Frog extends Animal{
+  + hungry: boolean
+  
+  + eat(Animal): String
+  + isHungry(): boolean
+  +getName(): String <<override>>
+  + getColor(): String <<override>>
+  + getName(): String <<override>>
+  
+}
+
+class Human <<abstract>>{
+  + name: String
+  
+  + getName(): String <<abstract>>
+}
+
+interface Singing{
+  +sing(Song): String
+  +stopSinging(): String
+  +cry(): String
+  +stopCrying(): String
+  +addSong(Song): void
+  +changeSongState(SongStates): void
+  +isKnowTheSong(Song): boolean
+  +getCurrentSongName(): String
+  +getSongState(): SongStates
+}
+
+class Singer extends Human implements Singing{
+  +currentSong: Song
+  +SongState: SongStates
+  +Crying: boolean
+  +songs: ArrayList<Song>
+  
+  +sing(Song): String <<override>>
+  +stopSinging(): String <<override>>
+  +cry(): String <<override>>
+  +stopCrying(): String <<override>>
+  +addSong(Song): void <<override>>
+  +changeSongState(SongStates): void <<override>>
+  +isKnowTheSong(Song): boolean <<override>>
+  +getName(): String
+  +getCurrentSongname(): String <<override>>
+  +getSongState(): SongStates <<override>>
+}
+
+class Choir implements Singing{
+  +currentSong: Song
+  +SongState: SongStates
+  +Crying: boolean
+  +singers: ArrayList<Singer>
+  
+  +sing(Song): String <<override>>
+  +stopSinging(): String <<override>>
+  +cry(): String <<override>>
+  +stopCrying(): String <<override>>
+  +changeSongState(SongStates): void <<override>>
+  +addSong(Song): void <<override>>
+  +addSinger(Singer): void
+  +isKnowTheSong(Song): boolean <<override>>
+  +getCurrentSongname(): String
+  +getNames(): String <<override>>
+  +getSongState(): SongStates <<override>>
+}
+
+class Song <<record>>{
+  + name: String
+  + mood: Moods
+  + duration: Duration
+  
+  +getName(): String
+}
+
+class Tears{
+  + flow(): void
+}
+
+enum TypesOfAnimals{
+  MAMMAL
+  BIRD
+  REPTILE
+  AMPHIBIAN
+  FISH
+  INVERTEBRATE
+}
+
+enum Moods{
+  SAD
+  FUNNY
+}
+
+enum SongStates{
+  NOT_STARTED
+  JUST_STARTED
+  SUNG
+  NEAR_TO_END
+  ENDED
+}
+
+enum Duration{
+  SHORT
+  MEDIUM
+  LONG
+  VERY_LONG
+}
