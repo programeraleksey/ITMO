@@ -1,0 +1,65 @@
+<tbody>
+    <day>
+        <text>Ср</text>
+        <pair>
+            <time>08:20-09:50</time>
+            <weeks> эт тоже тестовая  штука &lt; лол </weeks>
+            <!-- <weeks>1, 3, 5, 7,9, 11, 13, 15, 17</weeks> -->
+            <subj>Информ 1.4 (Р3109)</subj>
+            <room>2116 ауд.</room>
+            <loc> Кронверкский пр., д.49, лит.А</loc>
+            <lesson>Информатика (Лаб)</lesson>
+            <lesson-format>Очный</lesson-format>
+        </pair>
+        <pair>
+            <subj>Информ 1.4 (Р3109)</subj>
+            <!--
+<time>10:00-11:30</time>
+<weeks>1, 3, 5, 7,9, 11, 13, 15, 17</weeks>
+-->
+            <room>2116 ауд.</room>
+            <loc>Кронверкский пр.,д.49, лит.А</loc>
+            <lesson>Информатика (Лаб)</lesson>
+            <lesson-format>Очный</lesson-format>
+        </pair>
+        <pair>
+            <time>11:40-13:10</time>
+            <weeks>2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18</weeks>
+            <subj>ДИСКР МАТЕМ БАЗ 1</subj>
+            <room>2403 ауд.</room>
+            <loc>Кронверкский пр., д.49, лит.А</loc>
+            <lesson>Основы дискретной математики (базовый уровень) (Лек)</lesson>
+            <lesson-format>Очный</lesson-format>
+        </pair>
+        <pair>
+            <time>13:30-15:00</time>
+            <weeks>2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18</weeks>
+            <subj>ДИСКР МАТЕМ БАЗ 1</subj>
+            <room>2403 ауд.</room>
+            <loc>Кронверкский пр., д.49, лит.А</loc>
+            <lesson>Основы дискретной математики (базовый уровень) (Лек)</lesson>
+            <lesson-format>Очный</lesson-format>
+        </pair>
+    </day>
+    <day>
+        <text>Чт</text>
+        <pair>
+            <time>11:40-13:10</time>
+            <weeks>1,3,5,7,9,11,13,15</weeks>
+            <subj>Россия в истории современных международных отношений</subj>
+            <room>2426 ауд.</room>
+            <loc>Кронверкский пр., д.49, лит.А</loc>
+            <lesson>История (Прак)</lesson>
+            <lesson-format>Очный</lesson-format>
+        </pair>
+        <pair>
+            <time>13:30-15:00</time>
+            <weeks>1,3,5,7,9,13,15</weeks>
+            <subj>Россия в истории современных международных отношений</subj>
+            <room>1229 ауд.</room>
+            <loc>Кронверкский пр., д.49, лит.А</loc>
+            <lesson>История (Лек)</lesson>
+            <lesson-format>Очный</lesson-format>
+        </pair>
+    </day>
+</tbody>
