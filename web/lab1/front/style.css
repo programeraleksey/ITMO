@@ -1,0 +1,54 @@
+    ::selection {
+  background: cyan;
+}
+
+html {
+  height: 100%;
+  background-image: linear-gradient(to top, #459ec4, #337693);
+}
+body {
+  height: 100%;
+  margin: 1%;
+  font-size: 14pt;
+}
+
+header {
+    font-size: 12pt;
+    font: 'sans-serif';
+    color: #74f1d4;
+    margin-bottom: 5%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: #e0f7fa;
+}
+
+#main_table {
+    margin-left: auto;
+    margin-right: 0%;
+    border: none;
+  border-collapse: separate; /* чтобы не мешало вложенным */
+  background: transparent;
+}
+
+#for_result_table {
+    vertical-align: top;
+}
+
+#for_input_table {
+    padding-right: 5%;
+}
+
+#main_table > tbody > tr > td {
+  border: none;
+  background: transparent;
+}
+
+#eror_message {
+    color: hwb(53 8% 0%);
+    font-weight: bold;
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+    font-size: 20pt;}
