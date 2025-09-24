@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Табличная вёрстка</title>
+    <meta charset="utf-8">
+    <lang="ru">
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header>
+        Поляков Алексей Леонидович <br>
+        P3209 <br>
+        Вариант 467141 <br>
+    </header>
+
+
+<table id="main_table">
+<tr>
+<td width="50%" id="for_input_table">
+
+
+<table id="input_table">
+<tr>
+<td>
+    <fieldset>
+    <legend>Select X:</legend>
+    <input type="button" name="x" value="-2">
+    <input type="button" name="x" value="-1.5">
+    <input type="button" name="x" value="-1">
+    <input type="button" name="x" value="0">
+    <input type="button" name="x" value="0.5">
+    <input type="button" name="x" value="1">
+    <input type="button" name="x" value="1.5">
+    <input type="button" name="x" value="2">
+    </fieldset>
+</td>
+<td width="50%" rowspan="4"><canvas id="graph" width="300" height="300"></canvas></td>
+</tr>
+<tr>
+<td width="50%"><text>Select Y:</text><br>
+    <input type="text" name="y"></td>
+</tr>
+<tr>
+<td width="50%">    
+    <fieldset class="radio-group">
+    <legend>Select R:</legend>
+    <label class="radio-option">
+    <input type="radio" name="r" value="1">
+    <span>1</span>
+  </label>
+
+  <label class="radio-option">
+    <input type="radio" name="r" value="1.5">
+    <span>1.5</span>
+  </label>
+
+  <label class="radio-option">
+    <input type="radio" name="r" value="2">
+    <span>2</span>
+  </label>
+
+  <label class="radio-option">
+    <input type="radio" name="r" value="2.5">
+    <span>2.5</span>
+  </label>
+
+  <label class="radio-option">
+    <input type="radio" name="r" value="3">
+    <span>3</span>
+  </label>
+    </fieldset>
+</td>
+</tr>
+<tr>
+    <td><input type="submit" value="Отправить"></td>
+</tr>
+<tr>
+  <td id="eror_message"></td>
+</tr>
+</table>
+</td>
+
+
+<td width="50%" id="for_result_table" rowspan="2">
+<table id="result_table">
+<tr>
+    <td width="15%">Попал?</td>
+    <td width="8%">X</td>
+    <td width="8%">Y</td>
+    <td width="8%">R</td>
+    <td width="26%">Время работы скрипта</td>
+    <td width="35%">Время</td>
+  </tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

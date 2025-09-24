@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Кнопка</title>
+    <meta charset="utf-8">
+    <lang="ru">
+</html>
+<body>
+    <input type="text" name="myText"><br>
+    <input type="button" value="Нажми меня" name="myButton"><br>
+    <label id="for_info"></label><br>
+    <label id="result"></label>
+<script>
+    async function sendAndAccept(number) {
+        const response = await fetch("/fcgi-bin/server.jar", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+        },
+        body: JSON.stringify({
+        x: number
+        }),
+        }
+    );
+    if (!response.ok) {
+        document.querySelector('#result').textContent = "Ошибка HTTP: " + response.status;
+        return;
+    }
+    const result = await response.json();
+    document.querySelector('#result').textContent = "Ответ сервера: " + result.x;
+
+
+        
+    }
+    let result = document.querySelector('#result');
+    result.textContent = "Результат будет отображаться тут.";
+
+    document.querySelector('input[name="myButton"]').onclick = function() {
+        let number = Number(document.querySelector('input[name="myText"]').value);
+        let info = document.querySelector('#for_info');
+        info.textContent = "Введено число " + number + ", должно вернуться " + (number+number) + ".";
+        sendAndAccept(number);
+    }
+
+</script>
+</body>
