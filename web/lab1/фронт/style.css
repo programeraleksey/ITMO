@@ -6,11 +6,11 @@ html {
   height: 100%;
   background-image: linear-gradient(to top, #459ec4, #337693);
 }
+
 body {
   height: 100%;
   margin: 1%;
   font-size: 14pt;
-
 }
 
 header {
@@ -49,10 +49,10 @@ table, th, td {
   background: transparent;
 }
 
-*#input_table > tbody > tr > td {
+#input_table > tbody > tr > td {
   border: none;
   background: transparent;
-}*
+}
 
 #input_table {
   border-radius: 20px;

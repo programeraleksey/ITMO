@@ -106,16 +106,25 @@ function addRow(json) {
   resultTBody.appendChild(row);
 }
 
-    
+function saveTable(newData) {
+  const data = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || "[]");
+  data.push(newData);
+  sessionStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
 
-drawGraph();
+function loadTable() {
+  const data = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || "[]");
+  data.forEach(item => addRow(item));
+}
 
-
-
+const STORAGE_KEY = "resultTable";
 let x = null;
 let y = null;
 let r = null;
 let yInput = null;
+
+drawGraph();
+loadTable();
 
 const msg = document.getElementById("eror_message");
 
@@ -162,6 +171,7 @@ document.querySelector('input[type="submit"]').addEventListener('click', async (
       return;
     }
     addRow(responseData);
+    saveTable(responseData);
     msg.textContent = "";
   
 } catch (error) {
